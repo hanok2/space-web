@@ -1,0 +1,161 @@
+
+*, body {
+  background-color: #ffffff;
+  color: black;
+}
+
+.z-neupanel {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+/* glassmorphism */
+
+.z-overlay {
+  min-height: 80vh;
+  max-width: 90vw;
+  position: relative;
+  top: 4vh;
+  bottom: 4vh;
+  left: 5vw;
+  right: 5vw;
+  overflow: auto;
+  border-radius: 2rem;
+  /*padding: 1em;*/
+  border-width: 2px;
+  border-style: inset;
+  z-index: 10;
+}
+
+.z-tinted-glass {
+  background-color:rgba(124, 124, 124, 0.25);
+  /* background: linear-gradient(to right top, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.25)); */
+  z-index: 5;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.z-glass, .z-frosted-glass {
+  /* background-color:rgba(124, 124, 124, 0.25); */
+  background-color: rgba(255,255,255,0.1);
+  /* background: linear-gradient(to right top, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.25)); */
+  z-index: 5;
+}
+.z-frosted-glass { backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+
+/* Styles specific to this document go here temporarily... */
+
+  menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    z-index: 20;
+  }
+
+  .hero {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 80vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+  }
+
+  .hero > video {
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*min-height: 250px;*/
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero > header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*
+  fieldset {
+    border: 1px solid;
+    flex-flow: row;
+    flex-wrap: wrap;
+  } fieldset *, fieldset div {
+    display: inline;
+    flex-basis: 33%;
+    flex-grow:   1;
+    flex-shrink: 1;
+  } fieldset input {flex-grow: 2;}fieldset progress, datalist {flex-grow: 3;}
+  */
+
+
+  /* more styles (experimental) */
+  
+  .z-hidden {
+    display: none;
+  }
+
+  nav {padding: 1rem;}
+  
+  .z-main-navbar {
+    position: absolute;
+    left: 0;
+  }
+  nav ul {
+    margin: 0;
+    padding: 4px;
+    height: 100%;
+    width: 6em;
+    position: fixed;
+    top: 2;
+    left: 0;
+    background-color: #262626;
+    background-color: rgba(38, 38, 38, 0.25);
+  }
+  nav ul li {
+    list-style: none;
+  }
+  .z-nav-item {
+    background-color: rgba(38, 38, 38, 0.25);
+  }
+
+  /* ***************** */
+
+  .neumorph-btn {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #e0e0e0;
+   }
+   
+   .neumorph-btn:hover {border: 1px solid white;}
+   
+   .neumorph-btn:active {box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;}
+
+

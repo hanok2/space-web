@@ -1,0 +1,444 @@
+@import url("./zed-fonts.css");
+@import url("./zed-color.css");
+@import url('zed.css'); /* a framework I made like a minute ago; includes normalization */
+@import url('zed-grid-space.css');
+/* Everything is MIT licence, by the way. */
+
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+html, body, * {
+    font-family:"Barlow Semi Condensed", "Helvetica Neue", Helvetica, Verdana, "Roboto", "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size:16px;
+    line-height:1.5;
+}
+html {overflow-x:hidden}
+
+
+@media only print {
+  body {
+    background-color: white!important;
+    color: var(--dark)!important;
+  }
+}
+
+@media only screen and (min-width: 200px) { /* and (max-width:768px)  */
+  body {
+    background-color: var(--dark)!important;
+    color: var(--light)!important;
+
+    background-image: url('../images/background-home-mobile.jpg');
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url('../images/background-home-tablet.jpg');
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    background-image: url('../images/background-home-desktop.jpg');
+  }
+}
+
+.subheading {
+    font-size: 14px;
+    font-variant: small-caps;
+    /* 2.35 character spacing */
+}
+
+.nav-text {
+    font-size: 16px;
+    font-variant: small-caps;
+    /* 2.7 Character Spacing */
+}
+
+/* ========================== */
+/* Button Labels and Numbers: */
+
+.id_num {
+    font-weight: 800;
+    color: var(--dim);
+}
+.id_num:hover {color: var(--blue);}
+.id_num:active{color: var(--amber);}
+
+.id_label {
+    font-weight: 300;
+    color: var(--light);
+}
+.id_label:hover {color: var(--blue);}
+.id_label:active{color: var(--amber);}
+
+/* ======================================= */
+/* headings                                */
+
+h1{
+    font-size: 120px; 
+    font-family: 'Bellefair', Garamond, 'EB Garamond', serif;
+    font-variant: small-caps;
+}
+h2{
+    font-size: 96px; 
+    font-family: 'Bellefair', Garamond, 'EB Garamond', serif;
+    font-variant: small-caps;
+}
+h3{
+    font-size: 48px; 
+    font-family: 'Bellefair', Garamond, 'EB Garamond', serif;
+    font-variant: small-caps;
+}
+h4{
+    font-size: 28px; 
+    font-family: 'Bellefair', Garamond, 'EB Garamond', serif;
+    font-variant: small-caps;
+}
+h5 {
+    font-size: 20px; font-family: 'Barlow Semi Condensed', Verdana, 'Roboto', serif;
+    /* 4.75 character spacing */
+}
+h6 {
+    font-size: 20px; font-family: 'Bellefair', Garamond, 'EB Garamond', serif;
+    /*  */
+}
+
+.z-serif{font-family: 'Bellefair', Garamond, 'EB Garamond', serif;}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:400;
+    margin:10px 0
+}
+
+.z-sans-serif{font-family: 'Barlow Semi Condensed', "Helvetica Neue", Helvetica, Verdana, "Roboto", "Ubuntu", sans-serif;}
+
+.z-wide{letter-spacing:4px}
+
+.z-border-on {
+    border-radius: 8px;
+    border: 1rem solid inset gray;
+}
+.z-border-off {border:none;}
+
+
+.box-shadow {box-shadow: #2c3e50;}
+
+.box-glow  {box-shadow: white;}
+
+
+.z-neupanel {
+  border-radius: 50px;
+  border-style: inset;
+  border-color: var(--light);
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  /* box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff; */
+  box-shadow: 6px 6px 12px var(--charcoal-light), -6px -6px 12px var(--charcoal-dark);
+}
+.z-neupanel:active {
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  20px 20px 60px #ffffff, -20px -20px 60px #bebebe;
+}
+
+
+  .z-hidden {display: none;}
+
+  .z-header-toprow {
+      display: flex;
+      flex-direction: row;
+      flex: 1 1 100%;
+  }
+
+  .z-header-toprow .z-logo, .z-header-toprow img {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis:content;
+      flex-wrap: nowrap;
+  }
+
+  .z-header-toprow hr {
+      position: relative;
+      display: inline-block;
+      flex: 1 1 100%;
+      min-width: 100%;
+      z-index: -1;
+  }
+
+  nav {
+      padding: 1rem;
+      display: inline-block;
+  }
+    
+  .z-navmenu {
+      display: flex;
+      flex-direction: row;
+      vertical-align: middle;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100%;
+      flex-wrap: nowrap;
+      margin: 1rem;
+      padding: 1rem;
+  }
+  
+  .z-main-navbar {
+    position: absolute;
+    left: 0;
+  }
+  /*
+  nav ul {
+    margin: 0;
+    padding: 4px;
+    height: 100%;
+    width: 6em;
+    position: fixed;
+    top: 2;
+    left: 0;
+    background-color: #262626;
+    background-color: rgba(38, 38, 38, 0.25);
+  }
+  nav ul li {
+    list-style: none;
+  }
+  */
+  .z-nav-item {
+    background-color: rgba(38, 38, 38, 0.25);
+  }
+
+  /* ***************** */
+
+  .z-inline-box{
+      display: inline-block;
+  }
+
+  .z-cta-btn {
+    color: var(--dark);
+    padding: 8ex 5ex;
+    text-transform: small-caps;
+    font-weight: 200;
+    font-size: x-large;
+    border-radius: 50%;
+    transition: all .5s;
+  }
+
+  .neumorph-btn {
+    color: var(--dim);
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    transition: all .3s;
+    box-shadow: 6px 6px 12px var(--charcoal-light), -6px -6px 12px var(--charcoal-dark);
+   }
+   
+   .neumorph-btn:hover {border: 1px solid var(--light);}
+   
+   .neumorph-btn:active {
+       box-shadow: 4px 4px 12px #e0e0e0, -4px -4px 12px #c5c5c5;
+       background-color: #e0e0e0;
+       color: #f44;
+    }
+
+
+/* glassmorphism */
+
+.z-overlay {
+  min-height: 80vh;
+  max-width: 90vw;
+  position: relative;
+  top: 4vh;
+  bottom: 4vh;
+  left: 5vw;
+  right: 5vw;
+  overflow: auto;
+  border-radius: 2rem;
+  /*padding: 1em;*/
+  border-width: 2px;
+  border-style: inset;
+  z-index: 10;
+}
+
+.z-tinted-glass {
+  background-color:rgba(124, 124, 124, 0.25);
+  /* background: linear-gradient(to right top, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.25)); */
+  z-index: 5;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.z-glass, .z-frosted-glass {
+  /* background-color:rgba(124, 124, 124, 0.25); */
+  background-color: rgba(255,255,255,0.1);
+  /* background: linear-gradient(to right top, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.25)); */
+  z-index: 5;
+}
+.z-frosted-glass { backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+
+/* Styles specific to this document go here temporarily... */
+
+  menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    z-index: 20;
+  }
+
+  .test-hero {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 80vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+  }
+
+  .z-hero {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .z-hero-text {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .z-hero > video {
+    position: absolute;
+    top: 20;
+    left: 50vw;
+    width: 50vw;
+    height: 50vh;
+    /*min-height: 250px;*/
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .z-hero-action {
+    display: flex;
+    align-items: center;
+  }
+
+  .test-hero > header, .z-hero > header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .z-hero-action {
+    display: inline-block;
+    text-align: center;
+  }
+
+  /*
+  fieldset {
+    border: 1px solid;
+    flex-flow: row;
+    flex-wrap: wrap;
+  } fieldset *, fieldset div {
+    display: inline;
+    flex-basis: 33%;
+    flex-grow:   1;
+    flex-shrink: 1;
+  } fieldset input {flex-grow: 2;}fieldset progress, datalist {flex-grow: 3;}
+  */
+
+
+  /* more styles (experimental) */
+
+
+  .tearout
+  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+  }
+  .bg 
+  {
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    background: url('../images/289580-Futurama.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .paper 
+  {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/paper.jpg');
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: lighten;
+    filter: brightness(1.1);
+  }
+
+  section h2 
+{
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+section p 
+{
+	line-height: 1.8em;
+}
+.parallaxBg 
+{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.parallaxBg h2 
+{
+	position: absolute;
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+	background: #fff;
+	padding: 0 20px;
+}
+  

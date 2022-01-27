@@ -1,0 +1,114 @@
+
+body, * {
+    --amber:#ffc107;
+    --blue:  #2597f4;
+    --charcoal:#282828;
+    --dark: #0b0d17;
+    --dim:  #d0d6f9;
+    --light:#ffffff;
+}
+
+.z-dark, .z-hover-dark:hover {color: var(--light); background-color: var(--dark)!important;}
+.z-dim,  .z-hover-dim:hover  {color: var(--dark); background-color: var(--dim)!important;}
+.z-light,.z-hover-light:hover{color: var(--dark); background-color: var(--light)!important;}
+
+.z-charcoal-light,.z-hover-charcoal-light:hover{color: whitesmoke!important; background-color: #323232!important;}
+.z-charcoal,.z-hover-charcoal:hover{color: whitesmoke!important; background-color: #282828!important;}
+.z-charcoal-dark,.z-hover-charcoal-dark:hover{color: whitesmoke!important; background-color: #1e1e1e!important;}
+
+.z-amber-light,.z-hover-amber-light:hover{color: black!important;background-color:#ffc61a!important;}
+.z-amber-dark,.z-hover-amber-dark:hover{color:black!important;background-color:#e6ac00!important;}
+
+.z-blue-light,.z-blue-light-hover:hover{color:black!important;background-color: #55aef6!important;}
+.z-blue-dark, .z-blue-dark-hover:hover{color:black!important; background-color: #0b7dda!important;}
+
+/* Colors from W3.CSS */
+.z-amber,.z-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.z-aqua,.z-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.z-blue,.z-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.z-light-blue,.z-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.z-brown,.z-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.z-cyan,.z-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.z-blue-grey,.z-hover-blue-grey:hover,.z-blue-gray,.z-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.z-green,.z-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.z-light-green,.z-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.z-indigo,.z-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.z-khaki,.z-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.z-lime,.z-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.z-orange,.z-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.z-deep-orange,.z-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.z-pink,.z-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.z-purple,.z-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.z-deep-purple,.z-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.z-red,.z-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.z-sand,.z-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.z-teal,.z-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.z-yellow,.z-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.z-white,.z-hover-white:hover{color:#000!important;background-color:#fff!important}
+.z-black,.z-hover-black:hover{color:#fff!important;background-color:#000!important}
+.z-grey,.z-hover-grey:hover,.z-gray,.z-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+.z-light-grey,.z-hover-light-grey:hover,.z-light-gray,.z-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.z-dark-grey,.z-hover-dark-grey:hover,.z-dark-gray,.z-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.z-pale-red,.z-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.z-pale-green,.z-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.z-pale-yellow,.z-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.z-pale-blue,.z-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+
+.z-text-amber,.z-hover-text-amber:hover{color:#ffc107!important}
+.z-text-aqua,.z-hover-text-aqua:hover{color:#00ffff!important}
+.z-text-blue,.z-hover-text-blue:hover{color:#2196F3!important}
+.z-text-light-blue,.z-hover-text-light-blue:hover{color:#87CEEB!important}
+.z-text-brown,.z-hover-text-brown:hover{color:#795548!important}
+.z-text-cyan,.z-hover-text-cyan:hover{color:#00bcd4!important}
+.z-text-blue-grey,.z-hover-text-blue-grey:hover,.z-text-blue-gray,.z-hover-text-blue-gray:hover{color:#607d8b!important}
+.z-text-green,.z-hover-text-green:hover{color:#4CAF50!important}
+.z-text-light-green,.z-hover-text-light-green:hover{color:#8bc34a!important}
+.z-text-indigo,.z-hover-text-indigo:hover{color:#3f51b5!important}
+.z-text-khaki,.z-hover-text-khaki:hover{color:#b4aa50!important}
+.z-text-lime,.z-hover-text-lime:hover{color:#cddc39!important}
+.z-text-orange,.z-hover-text-orange:hover{color:#ff9800!important}
+.z-text-deep-orange,.z-hover-text-deep-orange:hover{color:#ff5722!important}
+.z-text-pink,.z-hover-text-pink:hover{color:#e91e63!important}
+.z-text-purple,.z-hover-text-purple:hover{color:#9c27b0!important}
+.z-text-deep-purple,.z-hover-text-deep-purple:hover{color:#673ab7!important}
+.z-text-red,.z-hover-text-red:hover{color:#f44336!important}
+.z-text-sand,.z-hover-text-sand:hover{color:#fdf5e6!important}
+.z-text-teal,.z-hover-text-teal:hover{color:#009688!important}
+.z-text-yellow,.z-hover-text-yellow:hover{color:#d2be0e!important}
+.z-text-white,.z-hover-text-white:hover{color:#fff!important}
+.z-text-black,.z-hover-text-black:hover{color:#000!important}
+.z-text-grey,.z-hover-text-grey:hover,.z-text-gray,.z-hover-text-gray:hover{color:#757575!important}
+.z-text-light-grey,.z-hover-text-light-grey:hover,.z-text-light-gray,.z-hover-text-light-gray:hover{color:#f1f1f1!important}
+.z-text-dark-grey,.z-hover-text-dark-grey:hover,.z-text-dark-gray,.z-hover-text-dark-gray:hover{color:#3a3a3a!important}
+
+.z-border-amber,.z-hover-border-amber:hover{border-color:#ffc107!important}
+.z-border-aqua,.z-hover-border-aqua:hover{border-color:#00ffff!important}
+.z-border-blue,.z-hover-border-blue:hover{border-color:#2196F3!important}
+.z-border-light-blue,.z-hover-border-light-blue:hover{border-color:#87CEEB!important}
+.z-border-brown,.z-hover-border-brown:hover{border-color:#795548!important}
+.z-border-cyan,.z-hover-border-cyan:hover{border-color:#00bcd4!important}
+.z-border-blue-grey,.z-hover-border-blue-grey:hover,.z-border-blue-gray,.z-hover-border-blue-gray:hover{border-color:#607d8b!important}
+.z-border-green,.z-hover-border-green:hover{border-color:#4CAF50!important}
+.z-border-light-green,.z-hover-border-light-green:hover{border-color:#8bc34a!important}
+.z-border-indigo,.z-hover-border-indigo:hover{border-color:#3f51b5!important}
+.z-border-khaki,.z-hover-border-khaki:hover{border-color:#f0e68c!important}
+.z-border-lime,.z-hover-border-lime:hover{border-color:#cddc39!important}
+.z-border-orange,.z-hover-border-orange:hover{border-color:#ff9800!important}
+.z-border-deep-orange,.z-hover-border-deep-orange:hover{border-color:#ff5722!important}
+.z-border-pink,.z-hover-border-pink:hover{border-color:#e91e63!important}
+.z-border-purple,.z-hover-border-purple:hover{border-color:#9c27b0!important}
+.z-border-deep-purple,.z-hover-border-deep-purple:hover{border-color:#673ab7!important}
+.z-border-red,.z-hover-border-red:hover{border-color:#f44336!important}
+.z-border-sand,.z-hover-border-sand:hover{border-color:#fdf5e6!important}
+.z-border-teal,.z-hover-border-teal:hover{border-color:#009688!important}
+.z-border-yellow,.z-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.z-border-white,.z-hover-border-white:hover{border-color:#fff!important}
+.z-border-black,.z-hover-border-black:hover{border-color:#000!important}
+.z-border-grey,.z-hover-border-grey:hover,.z-border-gray,.z-hover-border-gray:hover{border-color:#9e9e9e!important}
+.z-border-light-grey,.z-hover-border-light-grey:hover,.z-border-light-gray,.z-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+.z-border-dark-grey,.z-hover-border-dark-grey:hover,.z-border-dark-gray,.z-hover-border-dark-gray:hover{border-color:#616161!important}
+.z-border-pale-red,.z-hover-border-pale-red:hover{border-color:#ffe7e7!important}
+.z-border-pale-green,.z-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+.z-border-pale-yellow,.z-hover-border-pale-yellow:hover{border-color:#ffffcc!important}
+.z-border-pale-blue,.z-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+

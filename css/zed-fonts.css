@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+
+@import url('https://fonts.googleapis.com/css?family=Allerta Stencil');
+@import url('https://fonts.googleapis.com/css?family=Black Ops One');
+
+@import url('https://fonts.googleapis.com/css?family=Brygada 1918');
+
+@import url('https://fonts.googleapis.com/css?family=Bubblegum Sans');
+@import url('https://fonts.googleapis.com/css?family=Coda');
+@import url('https://fonts.googleapis.com/css?family=Comic Neue');
+@import url('https://fonts.googleapis.com/css?family=Courier Prime');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+
+@import url('https://fonts.googleapis.com/css?family=DM Mono');
+@import url('https://fonts.googleapis.com/css?family=DM Sans');
+@import url('https://fonts.googleapis.com/css?family=DM Serif Display');
+@import url('https://fonts.googleapis.com/css?family=DM Serif Text');
+@import url('https://fonts.googleapis.com/css?family=Gentium Basic');
+@import url('https://fonts.googleapis.com/css?family=Gentium Book Basic');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Mono');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Sans');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Serif');
+
+/* The Good Stuff: */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Flow+Circular&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=Gugi&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Pushster&family=Satisfy&family=Smooch&family=Special+Elite&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
+/* For the SPACE site: ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Default Stuff the Way I Like It: =========================================== */
+
+.z-sans-serif, .font_roboto {
+	font-family: 'Roboto', sans-serif;
+}
+.font_ubuntu {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+
+.z-serif, .font_garamond {
+	font-family: 'EB Garamond', serif;
+}
+.font_bree {
+	font-family: 'Bree Serif', serif;
+}
+
+
+.z-cursive, .font_licorice {
+	font-family: 'Licorice', cursive;
+}
+.z-bold-cursive, .font_pushster {
+	font-family: 'Pushster', cursive;
+}
+.z-marker, .font_marker {
+	font-family: 'Permanent Marker', cursive;
+}
+.z-boldprint, .font_indie_flower {
+	font-family: 'Indie Flower', cursive;
+}
+.z-handprint, .font_kalam {
+	font-family: 'Kalam', cursive;
+}
+.z-typewriter, .font_special_elite {
+	font-family: 'Special Elite', cursive;
+}
+
+
+/*
+font-family: 'Flow Circular', cursive;
+font-family: 'Fuzzy Bubbles', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Gugi', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Smooch', cursive;
+*/
+
+
+.z-mono, .font_ubuntu_mono {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+
+/* TODO: 
+ * font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ * font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+ */
+
+/*
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Black Ops One' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Brygada 1918' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Coda' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Gentium Basic' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Gentium Book Basic' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Serif' rel='stylesheet'>
+
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+ */
+

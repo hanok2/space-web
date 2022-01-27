@@ -1,0 +1,62 @@
+@import url('zed-color.css');
+
+.dial {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dial li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transform-origin: 100px;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(80px);
+}
+
+.dial.active li {
+  transform: rotate(calc(360deg / 8 * var(--i)));
+}
+
+.dial li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / -8 * var(--i)));
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+  color: #111;
+  transition: 0.5s;
+}
+
+.dial li a:hover {
+  color: #ff1252;
+}
+
+.dial-toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15);
+  font-size: 2em;
+  transition: transform 1.25s;
+}
+
+.dial.active .dial-toggle {
+  transform: rotate(315deg);
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Flow+Circular&family=Fuzzy+Bubbles:wght@400;700&family=Gloria+Hallelujah&family=Gugi&family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Pushster&family=Satisfy&family=Smooch&family=Special+Elite&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+.z-cursive {
+  font-family: 'Licorice', 'Pushster', cursive;
+}
+.z-marker {
+  font-family: 'Permanent Marker', 'Indie Flower', cursive;
+}
+.z-boldprint {
+  font-family: 'Indie Flower', cursive;
+}
+.z-handprint {
+  font-family: 'Kalam', 'Indie Flower', cursive;
+}
+.z-typewriter {
+  font-family: 'Special Elite', cursive;
+}
+
+
+/* Based on w3-pinboard.css */
+
+dl.pinboards,
+ul.tag-list li {
+  list-style: none;
+  display: inline-block;
+}
+dl.pinboards dt h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #000;
+}
+dl.pinboards dd, dl.pinboards dd div, dl.pinboards dd p { font-size: 16px; }
+dl.pinboards dd {
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: inline-block;
+  /*
+  opacity: 1.0;
+  display: block;
+  height: 360px;
+  width: 360px;
+  padding: 1em;
+  position: relative;
+  */
+}
+dl.pinboards dd small {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+}
+dl.pinboards dd a {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  /*color: inherit;*/
+}
+dl.pinboards {
+  margin: 10px 40px 50px 0;
+  float: left;
+}
+dl.pinboards dd p {
+  font-size: 12px;
+}
+dl.pinboards {
+  text-decoration: none;
+  color: #000;
+  background: rgb(255, 255, 80);
+  display: block;
+  height: 400px;
+  width: 400px;
+  padding: 1em;
+  /* Firefox */
+  -moz-box-shadow: 5px 5px 2px #212121;
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 2px rgba(33, 33, 33, 0.7);
+  /* Opera */
+  box-shadow: 5px 5px 2px rgba(33, 33, 33, 0.7);
+}
+dl.pinboards {
+  transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+}
+dl.pinboards:nth-child(even) {
+  transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+}
+dl.pinboards:nth-child(3n) {
+  transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
+}
+dl.pinboards:nth-child(5n) {
+  transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  position: relative;
+  top: -10px;
+}
+dl.pinboards:hover,
+dl.pinboards:focus {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  position: relative;
+  z-index: 5;
+}
+
+dl.pinboards {
+  text-decoration: none;
+  /*
+  color: #000;
+  background: #ffc;
+  */
+  display: block;
+  height: 400px;
+  width: 400px;
+  padding: 1em;
+  -moz-box-shadow: 5px 5px 7px #212121;
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transition: transform 0.15s linear;
+  -moz-transition: -moz-transform 0.15s linear;
+  -o-transition: -o-transform 0.15s linear;
+  -webkit-transition: -webkit-transform 0.15s linear;
+}
