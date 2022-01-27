@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 158 158" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g transform="translate(-1,-1)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m20.5 22.5-3 15h14l-3-15z"/>
+  <path d="m18.5 27.5c-8.5 2.5-13 11.5-13 17 0 1.5 6.5 2 8 2h22c1.5 0 8-0.5 8-2 0-5.5-4.5-14.5-13-17l-5 1-1 8-1-8z"/>
+  <path d="m24.5 3.5c-5.5 0-10 5-10 11s4.5 11 10 11 10-5 10-11-4.5-11-10-11z"/>
+  <path d="m24.5 1.5c-4 0-6 1.5-7 4-3 1-4 5-3 9 2-2 3-4 4-7 11 8 10-3 16 7 1-8-4-13-10-13z"/>
+  <path d="m18.5 25.5c1 1 2 2 5 3-2 1-2 3-2 4-2-1-4-4-4-6z"/>
+  <path d="m30.5 25.5c-1 1-2 2-5 3 2 1 2 3 2 4 2-1 4-4 4-6z"/>
+  <path d="m14.5 38.5-1 8m22 0-1-8"/>
+ </g>
+ <g transform="translate(55,-1)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m7.75 36.5c-1.25 0-2 0.3-2.5 1.5l-2.5 6c-0.85 2 0.25 2.5 1.25 2.5h40c1 0 2.1-0.5 1.25-2.5l-2.5-6c-0.5-1.2-1.25-1.5-2.5-1.5z"/>
+  <path d="m14.5 29.5-1 3c-0.5 1.5 0 2 1.5 2h18c1.5 0 2-0.5 1.5-2l-1-3z"/>
+  <path d="m8 38.5-2 6h36l-2-6z"/>
+  <path d="m37.5 38.5v6m-3-6v6m-3-6v6m-3-6v3m-3-3v3m-3-3v3m-3-3v3m-3-3v3m-3-3v6m-3-6v6m-3.5-3h34"/>
+  <rect x="19.5" y="28.5" width="9" height="4"/>
+  <rect x="4.5" y="1.5" width="39" height="29" rx="2" ry="2"/>
+  <rect x="7.5" y="4.5" width="33" height="22" rx="1" ry="1"/>
+ </g>
+ <g transform="translate(111,-1)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m4.5 35.5c0 1.25 0.75 2 2 2h35c1.25 0 2-0.75 2-2z"/>
+  <path d="m4.5 35.5c-1.25 0-2-0.75-2-2v-10c0-0.75 0.25-1 1-2l3-4c0.75-1 1-1 2-1h31c1 0 1.25 0 2 1l3 4c0.75 1 1 1.25 1 2v10c0 1.25-0.75 2-2 2z"/>
+  <path d="m9.5 16.5-1 2c-0.25 0.5 0 1 1 1h29c1 0 1.25-0.5 1-1l-1-2z"/>
+  <path d="m40.5 35.5v-3c0-1.25-0.75-2-2-2h-29c-1.25 0-2 0.75-2 2v3z"/>
+  <path d="m37.5 7.5v12h-27v-17.5c0-0.25 0.25-0.5 0.5-0.5h20.5"/>
+  <path d="m31.5 1.5v5.5c0 0.25 0.25 0.5 0.5 0.5h5.5z"/>
+  <path d="m38 33.5 4.5 12c0.375 1-0.5 1-1 1h-35c-0.5 0-1.375 0-1-1l4.5-12c0.375-1 0.5-1 1.5-1h25c1 0 1.125 0 1.5 1z"/>
+  <path d="m35.5 35.5h-21m21.75 2h-15.75m16.5 2h-24m24.75 2h-25.5m26.25 2h-27"/>
+ </g>
+ <g transform="translate(-1,55)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m6.5 29.5v10a17.5 5 0 0 0 17.5 5 17.5 5 0 0 0 17.5 -5v-10"/>
+  <path d="m6.5 19.5v10a17.5 5 0 0 0 17.5 5 17.5 5 0 0 0 17.5 -5v-10"/>
+  <path d="m6.5 9.5v10a17.5 5 0 0 0 17.5 5 17.5 5 0 0 0 17.5 -5v-10"/>
+  <path d="m24 4.5a17.5 5 0 0 0 -17.5 5 17.5 5 0 0 0 17.5 5 17.5 5 0 0 0 17.5 -5 17.5 5 0 0 0 -17.5 -5z"/>
+ </g>
+ <g transform="translate(55,55)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m7 8.5c-1 0-1.5 0.5-1.5 1.5v30.5h37v-27.5c0-1-0.5-1.5-1.5-1.5h-19.5l-2.5-2.5c-0.5-0.5-1-0.5-1.5-0.5z"/>
+  <path d="m43.5 40c0 1-0.5 1.5-1.5 1.5h-36c-1 0-1.5-0.5-1.5-1.5l-1-23c0-1 0.5-1.5 1.5-1.5h38c1 0 1.5 0.5 1.5 1.5z"/>
+ </g>
+ <g transform="translate(111,55)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m31.5 5.5h-22a1 1 0 0 0 -1 1v35a1 1 0 0 0 1 1h29a1 1 0 0 0 1 -1v-28"/>
+  <path d="m13 26.5h22m-22 9h17m-17-3h22m-22-3h22m-22-6h22m-22-3h22m-22-3h22"/>
+  <path d="m31.5 5.5v7a1 1 0 0 0 1 1h7z"/>
+ </g>
+ <g transform="translate(-1,111)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12.3 1.5-0.6 3.1-2.7 1.1-2.6-1.8-2.5 2.5 1.8 2.6l-1.1 2.7-3.1 0.6v3.5l3.1 0.5 1.1 2.7-1.8 2.6 2.5 2.5 2.6-1.8 2.7 1.1 0.6 3.1h3.5l0.5-3.1 2.7-1.1 2.6 1.8 2.5-2.5-1.8-2.6 1.1-2.7 3.1-0.5v-3.5l-3.1-0.6-1.1-2.7 1.8-2.6-2.5-2.5-2.6 1.8-2.7-1.1-0.5-3.1h-3.5zm1.7 8c2.5 0 4.5 2 4.5 4.5s-2 4.5-4.5 4.5-4.5-2-4.5-4.5 2-4.5 4.5-4.5z"/>
+  <path d="m25 10.5-0.8 4.4-3.9 1.6-3.8-2.5-3.5 3.5 2.5 3.8-1.6 3.9-4.4 0.8v5l4.4 0.8 1.6 3.9-2.5 3.8 3.5 3.5 3.8-2.5 3.9 1.6 0.8 4.4h5l0.8-4.4 3.9-1.6 3.8 2.5 3.5-3.5-2.5-3.8 1.6-3.9 4.4-0.8v-5l-4.4-0.8-1.6-3.9 2.5-3.8-3.5-3.5-3.8 2.5-3.9-1.6-0.8-4.4h-5zm2.5 12c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/>
+ </g>
+ <g transform="translate(55,111)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m16.5 1.5-5 6v39h24v-39l-5-6z"/>
+  <path d="m14.5 9.5v24h18v-24h-18z"/>
+  <path d="m14.5 31.5h18m-18-4h18m-18-2h18m-18-10h18m-18 4h18m-18 2h18m-18-8h18"/>
+  <path d="m30.5 43.5v-7m-2 7v-7m-2 7v-7m-2 7v-7m-2 7v-7m-2 7v-7m-2 7v-7m-2 7v-7"/>
+  <path d="m16.5 29.5h2m-2-6h2m-2-6h2m-2-6h2"/>
+ </g>
+ <g transform="translate(111,111)" fill="#f4f6f8" stroke="#0f2d59" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m22.5 27.5v10h-8v2h15v-2h-5v-10h-2z"/>
+  <path d="m25.5 38.5a2 2 0 1 1 -4 0 2 2 0 1 1 4 0z"/>
+  <path d="m4.5 11.5-3 4v28h16v-28l-3-4h-10z"/>
+  <path d="m3.5 17.5v15h12v-15h-12z"/>
+  <path d="m3.5 30.5h12m-12-3h12m-12-2h12m-12-3h12m-12-2h12"/>
+  <path d="m13.5 40.5v-5m-2 5v-5m-2 5v-5m-2 5v-5m-2 5v-5"/>
+  <use transform="translate(-7,-11)" width="744.09448" height="1052.3622" xlink:href="#a"/>
+  <g id="a">
+   <path d="m27.5 35.5v4c0 0.625 0.375 1 1 1h17c0.625 0 1-0.375 1-1v-4l-3-5h-13z"/>
+   <path d="m29.5 36.5v4h15v-4z"/>
+   <path d="m42.5 38.5h-5"/>
+   <path d="m32.5 30.5-1 2c-0.5 1-0.5 2 1.5 2h8c2 0 2-1 1.5-2l-1-2z"/>
+   <rect x="34.5" y="28.5" width="5" height="4"/>
+   <rect x="27.5" y="16.5" width="19" height="14" rx="1" ry="1"/>
+   <rect x="29.5" y="18.5" width="15" height="10"/>
+  </g>
+ </g>
+</svg>
