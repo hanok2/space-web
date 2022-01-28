@@ -84,20 +84,33 @@
     }
 }
 
-.z-grid {
+.z-grid { /* very small screens */
     display: grid;
     gap: 1rem;
+    /*
     grid-template-columns: repeat(auto-fit, minmax(320px, 25%));
+    grid-template-columns: repeat(6, 1fr);
+    */
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    
 }
 
-/* Medium screens */
+/* Minimal screens */
 @media screen and (min-width: 600px) {
+    .z-grid {
+        grid-template-columns: 1fr 1fr;
+    }
     .z-card-tall {
         grid-row: span 2 / auto;
     }
 
     .z-card-wide {
         grid-column: span 2 / auto;
+    }
+
+    .z-card-row {
+        grid-column: span 4 / auto;
     }
 }
 
@@ -113,7 +126,6 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
     "h h h h h h"
-    "b b b b b b"
     "m m m m m m"
     "s s s s s s"
     "f f f f f f";
@@ -175,6 +187,10 @@
 }
 
 @media (min-width: 768px) {
+    .z-grid {
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(256px, 33%));
+    }
     .z-gridbox {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: 
@@ -204,7 +220,12 @@
         min-height: 250px;
     }    
 }
-@media (min-width: 980px) {
+@media (min-width: 1024px) {
+    .z-grid {
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(256px, 25%));
+    }
+
     .z-gridbox {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: 

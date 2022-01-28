@@ -1,5 +1,6 @@
 @import url("./zed-fonts.css");
-@import url("./zed-color.css");
+/* @import url("./zed-color.css"); */
+@import url("./zed-cards.css");
 @import url('zed.css'); /* a framework I made like a minute ago; includes normalization */
 @import url('zed-grid-space.css');
 /* Everything is MIT licence, by the way. */
@@ -136,6 +137,21 @@ h1,h2,h3,h4,h5,h6{
 .box-glow  {box-shadow: white;}
 
 
+.z-claypanel {
+  border-radius: 100%;
+  /* background: #ffffff66; */
+  box-shadow: 0 10px 25px 0 darkgray, inset 0px -8px 15px 0px darkgray;
+  border: 0.1px solid transparent;
+  background: linear-gradient(145deg, white 0%, gray 75%);
+  /* box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #ffffff; */
+  box-shadow: 6px 6px 12px var(--charcoal-light), -6px -6px 12px var(--charcoal-dark);
+}
+.z-claypanel:active {
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  20px 20px 60px #ffffff, -20px -20px 60px #bebebe;
+}
+
+
 .z-neupanel {
   border-radius: 50px;
   border-style: inset;
@@ -254,7 +270,7 @@ h1,h2,h3,h4,h5,h6{
 
 .z-overlay {
   min-height: 80vh;
-  max-width: 90vw;
+  max-width: 80vw;
   position: relative;
   top: 4vh;
   bottom: 4vh;
@@ -265,7 +281,8 @@ h1,h2,h3,h4,h5,h6{
   /*padding: 1em;*/
   border-width: 2px;
   border-style: inset;
-  z-index: 10;
+  border-color: #2c3e50;
+  z-index: 5;
 }
 
 .z-tinted-glass {
