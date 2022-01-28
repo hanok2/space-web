@@ -81,6 +81,166 @@
     }
   }
 
+  .test-scrollbars {
+    overflow: scroll;
+  }
+  
+body,
+html {
+  /* font-family: "Poppins", sans-serif; */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility!important;
+  font-size: 12pt;
+  font-weight: 400;
+  /*color: purple;*/
+}
+
+.test-vbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--dark);
+  margin: 0;
+  padding: 0;
+}
+
+.test-clay {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 400px;
+  min-height: 250px;
+  max-width: 400px;
+  max-height: 250px;
+  background: linear-gradient(
+    35deg,
+    whitesmoke 0%,
+    white 84.7%,
+    blue 85%,
+    navy 91%,
+    white 91.3%
+  );
+  box-shadow: 0 10px 60px 0 var(--charcoal), inset 0px -10px 17px 2px var(--charcoal);
+  border-radius: 25px;
+  z-index: 15;
+}
+
+.test-clay::before {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  bottom: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+  content: "";
+  border-radius: 200px;
+  background: #ffffff66;
+  box-shadow: 0 10px 25px 0 gray, inset 0px -8px 15px 0px gray;
+  border: 0.1px solid transparent;
+  z-index: 14;
+}
+
+.test-clay p {
+  position: relative;
+  right: 5px;
+  font-size: 34pt;
+  font-weight: 900;
+  margin: 0;
+  padding: 20px 35px 10px 25px;
+  line-height: 36pt;
+  text-align: center;
+  color: purple;
+  align-self: center;
+  order: 2;
+}
+
+.test-clay span {
+  position: absolute;
+  bottom: 4px;
+  left: 45px;
+  width: 55%;
+  height: 20px;
+  background: navy;
+  content: "";
+  z-index: 14;
+}
+
+.test-clay i {
+  color: white;
+  text-shadow: 1px 1px 0px purple, 2px 2px 0px purple,
+    3px 3px 0px purple, -1px -1px 0px purple;
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+.test-clay::after {
+  backdrop-filter: blur(5px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-left: 20px;
+  padding-bottom: 28px;
+  top: -35px;
+  left: -23px;
+  width: 50%;
+  height: 50%;
+  background: #ffffff55;
+  content: "Claymorphism + Glassmorphism";
+  text-align: center;
+  color: purple;
+  line-height: 16pt;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px 0 gray, inset 0px -10px 20px 0px gray;
+  border: 0.1px solid transparent;
+  z-index: 15;
+}
+
+.test-clay > div {
+  all: unset;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0px 40px 30px;
+  border-radius: 15px;
+  background: url("https://picsum.photos/id/640/1280/800");
+  background-size: cover;
+  background-position: center;
+  border: 0.1px solid purple;
+  z-index: -1;
+}
+
+.test-clay > div::before {
+  all: unset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: navy;
+  mix-blend-mode: color;
+  border-radius: 15px;
+}
+
+.test-clay > div::after {
+  all: unset;
+}
+
+
   .logo {
     grid-area: logo;
   }
@@ -153,49 +313,86 @@
           </ul>
         </nav>
     </header>
-    <main class="main-section z-masonry-grid">
-        <h2 class="z-card-wide">Main Heading (2)</h2>
+    <main class="main-section z-grid">
+        <h1 class="z-card-row z-center">Heading1</h1>
+        <article class="z-card-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam alias magni impedit a possimus, nam tenetur ipsum eos eligendi. Fuga voluptatem voluptatum molestiae facilis dolores?</article>
         <img src="./images/289580-Futurama.jpg" class="z-card-tallish z-card-wide" alt="Futurama Rocks!" />
 
         <article class="z-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi blanditiis nostrum ipsam obcaecati ad tempore iste mollitia! Earum consectetur consequuntur dolor et consequatur corporis inventore neque quo veniam. Error quos dolores unde rem dolor ducimus aliquid vero praesentium laboriosam eveniet, optio neque perferendis nihil, fugiat eum hic molestiae harum placeat!</article>
         <article class="z-card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum natus, molestias quia consequatur quos esse illum culpa vitae dolores ipsum deleniti unde consectetur recusandae assumenda reprehenderit et! Eaque, excepturi magni.</article>
-        <div class="z-card-wide z-center"><a href="#" class="z-neupanel z-cta-btn z-circle">EXPLORE</a></div>
-        <div class="card-box z-card-wide z-card-tall">
-          <div class="card">card1</div>
-          <div class="card">card2</div>
-        </div>
+        <div class="z-card-wide z-center"><a href="#" class="z-claypanel z-cta-btn xz-circle">EXPLORE</a></div>
+        
+          <div class="z-card">card1</div>
+          <div class="z-card-wide test-vbox">
+            <div class="test-clay">
+              <p><span></span>design<br>trends<br><i>2022</i></p>
+              <div>
+              </div>
+            </div>
+          </div>
+        
     </main>
     <aside class="sidebar z-tinted-glass box-glow">
-      <h4>Aside Heading (4)</h4>
+      <h3>Aside Heading (3)</h3>
 
-      <div class="dial">
-        <a href="#" class="dial-toggle z-text-black"><ion-icon name="add-outline"></ion-icon></a>
-        <li style="--i:0;">
-          <a href="#"><ion-icon name="home-outline"></ion-icon></a>
-        </li>
-        <li style="--i:1;">
-          <a href="#"><ion-icon name="person-outline"></ion-icon></a>
-        </li>
-        <li style="--i:2;">
-          <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
-        </li>
-        <li style="--i:3;">
-          <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
-        </li>
-        <li style="--i:4;">
-          <a href="#"><ion-icon name="key-outline"></ion-icon></a>
-        </li>
-        <li style="--i:5;">
-          <a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
-        </li>
-        <li style="--i:6;">
-          <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
-        </li>
-        <li style="--i:7;">
-          <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
-        </li>
-      </div>
+      <nav id="subnav" class="z-center">
+        <div class="dial">
+          <a href="#" class="dial-toggle z-text-black"><ion-icon name="add-outline"></ion-icon></a>
+          <li style="--i:0;">
+            <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+          </li>
+          <li style="--i:1;">
+            <a href="#ident"><ion-icon name="person-outline"></ion-icon></a>
+          </li>
+          <li style="--i:2;">
+            <a href="#config"><ion-icon name="settings-outline"></ion-icon></a>
+          </li>
+          <li style="--i:3;">
+            <a href="#contact"><ion-icon name="mail-outline"></ion-icon></a>
+          </li>
+          <li style="--i:4;">
+            <a href="#login"><ion-icon name="key-outline"></ion-icon></a>
+          </li>
+          <li style="--i:5;">
+            <a href="#video"><ion-icon name="videocam-outline"></ion-icon></a>
+          </li>
+          <li style="--i:6;">
+            <a href="#gaming"><ion-icon name="game-controller-outline"></ion-icon></a>
+          </li>
+          <li style="--i:7;">
+            <a href="#camera"><ion-icon name="camera-outline"></ion-icon></a>
+          </li>
+        </div>
+      </nav>
 
+      <section>
+        <h4 id="ident">User Identity</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, veniam.</p>
+      </section>
+      <section>
+        <h4 id="config">Settings</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolor.</p>
+      </section>
+      <section>
+        <h4 id="contact">Contact</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, expedita.</p>
+      </section>
+      <section>
+        <h4 id="login">Login</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
+      </section>
+      <section>
+        <h4 id="video">Video</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, enim.</p>
+      </section>
+      <section>
+        <h4 id="gaming">Gaming</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, minus?</p>
+      </section>
+      <section>
+        <h4 id="camera">Camera</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, adipisci?</p>
+      </section>
       <p>text</p>
     </aside>
 

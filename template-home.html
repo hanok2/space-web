@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  
   <link rel="stylesheet" href="./css/zed-backgrounds.css">
   <link rel="stylesheet" href="./css/zed-style-space.css">
+  <link rel="stylesheet" href="./css/floating-dial.css">
   
   <title>Frontend Mentor | Space tourism website</title>
 
@@ -14,155 +18,419 @@
   .hidden, .hide, .template {display: none;}
 
   .inline {
-		display: inline-block;
-	}
+    display: inline-block;
+  }
 
   .left {float: left;}
   .right{float: right;}
+
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  header,
+  main,
+  .sidebar,
+  footer {
+    padding: 2em;
+  }
+
+  header { background: inherit; }
+  main { background: inherit;}
+
+
+  /* ======================
+    Demo stuff starts here 
+    ========================*/
+
+  body {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-areas:
+      ". header ."
+      ". main ."
+      ". side ."
+      "footer footer footer"
+  }
+
+  #pageTop {
+      grid-template-columns: 1em 30px minmax(100px, 2000px) 500px 1em;
+      grid-template-areas: ". logo hr navmenu ."
+  }
+
+  @media only screen and (min-width: 768px) {
+    body {
+      grid-template-columns: 1.5em minmax(400px, 650px) minmax(200px, 350px) 1.5em;
+      grid-template-areas:
+        ". header header ."
+        ". main side ."
+        "footer footer footer footer";
+      gap: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    body {
+      grid-template-columns: minmax(1.5em, 1fr) minmax(650px, 960px) 450px minmax(1.5em, 1fr);
+      grid-template-areas:
+        ". header header ."
+        ". main side ."
+        "footer footer footer footer"
+    }
+  }
+
+  .test-scrollbars {
+    overflow: scroll;
+  }
+  
+body,
+html {
+  /* font-family: "Poppins", sans-serif; */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility!important;
+  font-size: 12pt;
+  font-weight: 400;
+  /*color: purple;*/
+}
+
+.test-vbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  margin: 0;
+  padding: 0;
+}
+
+.test-clay {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 400px;
+  min-height: 250px;
+  max-width: 400px;
+  max-height: 250px;
+  background: linear-gradient(
+    35deg,
+    whitesmoke 0%,
+    white 84.7%,
+    blue 85%,
+    navy 91%,
+    white 91.3%
+  );
+  box-shadow: 0 10px 60px 0 var(--charcoal), inset 0px -10px 17px 2px var(--charcoal);
+  border-radius: 25px;
+  z-index: 15;
+}
+
+.test-clay::before {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  bottom: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+  content: "";
+  border-radius: 200px;
+  background: #ffffff66;
+  box-shadow: 0 10px 25px 0 gray, inset 0px -8px 15px 0px gray;
+  border: 0.1px solid transparent;
+  z-index: 14;
+}
+
+.test-clay p {
+  position: relative;
+  right: 5px;
+  font-size: 34pt;
+  font-weight: 900;
+  margin: 0;
+  padding: 20px 35px 10px 25px;
+  line-height: 36pt;
+  text-align: center;
+  color: purple;
+  align-self: center;
+  order: 2;
+}
+
+.test-clay span {
+  position: absolute;
+  bottom: 4px;
+  left: 45px;
+  width: 55%;
+  height: 20px;
+  background: navy;
+  content: "";
+  z-index: 14;
+}
+
+.test-clay i {
+  color: white;
+  text-shadow: 1px 1px 0px purple, 2px 2px 0px purple,
+    3px 3px 0px purple, -1px -1px 0px purple;
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+.test-clay::after {
+  backdrop-filter: blur(5px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-left: 20px;
+  padding-bottom: 28px;
+  top: -35px;
+  left: -23px;
+  width: 50%;
+  height: 50%;
+  background: #ffffff55;
+  content: "Claymorphism + Glassmorphism";
+  text-align: center;
+  color: purple;
+  line-height: 16pt;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 0 5px 30px 0 gray, inset 0px -10px 20px 0px gray;
+  border: 0.1px solid transparent;
+  z-index: 15;
+}
+
+.test-clay > div {
+  all: unset;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0px 40px 30px;
+  border-radius: 15px;
+  background: url("https://picsum.photos/id/640/1280/800");
+  background-size: cover;
+  background-position: center;
+  border: 0.1px solid purple;
+  z-index: -1;
+}
+
+.test-clay > div::before {
+  all: unset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: navy;
+  mix-blend-mode: color;
+  border-radius: 15px;
+}
+
+.test-clay > div::after {
+  all: unset;
+}
+
+
+  .logo {
+    grid-area: logo;
+    width: 80px;
+  }
+  .logo > img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #ruleLine {
+    grid-area: hr;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .menu {
+    grid-area: navmenu;
+  }
+
+  header { grid-column: header / header; } 
+  main { grid-area: main; }
+  .sidebar { grid-area: side; }
+  footer { grid-area: footer; }
+
+
+  .menu {
+    /* style the nav like a dialog box, but glassy */
+    position: static;
+    z-index: 25;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 10vh;
+    background: linear-gradient(to right top, rgba(24, 24, 24, 0.7), rgba(55, 55, 55, 0.25));
+    z-index: 5;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .menu > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding:0;
+    margin:0;
+    z-index: 10;
+  }
+
+  .menu-btn {
+    /* style the li as buttons */
+    padding:8px 16px;
+    /* border-top: 1px solid #ddd; */
+  }
+  /* .menu > ul > li:last-child { border-bottom: none;} */
+
+  .z-morphic-panel {
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 28px;
+    background: #ffffff55;
+    text-align: center;
+    color: var(--dark);
+    line-height: 16pt;
+    font-weight: 700;
+    border-radius: 5%;
+    box-shadow: 0 5px 30px 0 gray, inset 0px -10px 20px 0px gray;
+    border: 0.1px solid transparent;
+  }
 
 </style>
 
 </head>
 <body>
-  <header class="z-vbox">
-    <div class="z-hbox z-header_top_row z-nowrap" id="header_top_row">
-      <img src="./images/logo.svg" alt="Logo" />
+    <header id="pageTop" class="x-masonry-grid">
+        <span class="logo"><img src="./images/logo.svg" alt="Logo"></span>
+        <hr id="ruleLine">
+        <nav class="menu">
+          <ul>
+            <li class="menu-btn current"><a href="#">HOME</a></li>
+            <li class="menu-btn"><a href="#">DESTINATION</a></li>
+            <li class="menu-btn help-btn"><a href="#">CREW</a></li>
+            <li class="menu-btn help-btn"><a href="#">TECHNOLOGY</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main class="main-section z-grid">
+        <h4 class="z-card-row z-center">So, You Want to Travel To</h4>
+        <h1 class="z-card-row z-center">SPACE</h1>
+        <article class="z-card-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam alias magni impedit a possimus, nam tenetur ipsum eos eligendi. Fuga voluptatem voluptatum molestiae facilis dolores?</article>
+        <img src="./images/289580-Futurama.jpg" class="z-card-tallish z-card-wide" alt="Futurama Rocks!" />
 
-      <hr class="z-inline">
+        <article class="z-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi blanditiis nostrum ipsam obcaecati ad tempore iste mollitia! Earum consectetur consequuntur dolor et consequatur corporis inventore neque quo veniam. Error quos dolores unde rem dolor ducimus aliquid vero praesentium laboriosam eveniet, optio neque perferendis nihil, fugiat eum hic molestiae harum placeat!</article>
+        <article class="z-card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum natus, molestias quia consequatur quos esse illum culpa vitae dolores ipsum deleniti unde consectetur recusandae assumenda reprehenderit et! Eaque, excepturi magni.</article>
+        <div class="z-card-wide z-center"><a href="#" class="z-claypanel z-cta-btn xz-circle">EXPLORE</a></div>
+        
+          <div class="z-card">&nbsp;</div>
+          <div class="z-card-wide test-vbox">
+            <div class="test-clay">
+              <p><span></span>design<br>trends<br><i>2022</i></p>
+              <div>
+              </div>
+            </div>
+          </div>
+        
+    </main>
+    <aside class="sidebar z-morphic-panel">
+      <h3>Sidebar (H3)</h3>
 
-      <nav class="z-navmenu" id="navmenu"> <!-- I tag and ID everything because I might do some animations or something later. I'm just wasting time, really. -->
-          <a href="#" class="neumorph-btn xz-right"><span class="id_num" id="num_home">00</span>&nbsp;<span class="id_label z-text-white" id="label_home">Home</span></a>
-          <a href="#" class="neumorph-btn xz-right"><span class="id_num" id="num_dest">01</span>&nbsp;<span class="id_label z-text-blue" id="label_dest">Destination</span></a>
-          <a href="#" class="neumorph-btn xz-right"><span class="id_num" id="num_crew">02</span>&nbsp;<span class="id_label z-text-blue" id="label_crew">Crew</span></a>
-          <a href="#" class="neumorph-btn xz-right"><span class="id_num" id="num_tech">03</span>&nbsp;<span class="id_label z-text-blue" id="label_tech">Technology</span></a>
-      </nav>
-    </div>
-
-    <!-- I wish I could add a space news ticker in the header somewhere... 
-    <section class="z-ticker">news ticker</section>
-    -->
-  </header>
-  
-  <main class="z-main" id="main">
-    <!-- =================================================================== -->
-
-    <section class="z-hero z-content">
-      <!-- Because everything is tagged and has an ID, I *could* swap out the content with JavaScript. I don't know if I will, though... -->
-      <p id="z-hero-text"><!-- Wouldn't it be nice if the lines animated on load with a slide-in? -->
-        <h4 class="z-capitalize">So, you want to travel to</h4>
-        <h1>SPACE</h1>
-        <div class="after-the-heading">
-          Lets face it; if you want to go to space, you might as well genuinely go to 
-          outer space and not hover kind of on the edge of it. Well sit back, and relax 
-          because we will give you a truly out of this world experience!
+      <nav id="subnav" class="z-center">
+        <div class="dial">
+          <a href="#" class="dial-toggle z-text-black"><ion-icon name="add-outline"></ion-icon></a>
+          <li style="--i:0;">
+            <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+          </li>
+          <li style="--i:1;">
+            <a href="#ident"><ion-icon name="person-outline"></ion-icon></a>
+          </li>
+          <li style="--i:2;">
+            <a href="#config"><ion-icon name="settings-outline"></ion-icon></a>
+          </li>
+          <li style="--i:3;">
+            <a href="#contact"><ion-icon name="mail-outline"></ion-icon></a>
+          </li>
+          <li style="--i:4;">
+            <a href="#login"><ion-icon name="key-outline"></ion-icon></a>
+          </li>
+          <li style="--i:5;">
+            <a href="#video"><ion-icon name="videocam-outline"></ion-icon></a>
+          </li>
+          <li style="--i:6;">
+            <a href="#gaming"><ion-icon name="game-controller-outline"></ion-icon></a>
+          </li>
+          <li style="--i:7;">
+            <a href="#camera"><ion-icon name="camera-outline"></ion-icon></a>
+          </li>
         </div>
-      </p>
-    
-      <section class="z-hero-action">
-          <h6 class="z-neupanel z-circle z-cta-btn">Explore</h6>
+      </nav>
+
+      <section>
+        <h4 id="ident">User Identity</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, veniam.</p>
       </section>
-    </section>
-
-    <section class="tearout">
-      <div class="bg"></div>
-      <div class="paper"></div>
-    </section>
-
-    <section>
-      <div class="parallaxBg">
-			<img src="./images/Bender-futurama-3139514-1024-768.jpg" alt="Futurama ship" class="parllaximg1">
-			<h2>Left</h2>
-		</div>
-		<section>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
-		</section>
-		<div class="parallaxBg">
-			<img src="./images/100622-futuramajpg-a518e007521fad5c.jpg" alt="Futurama" class="parllaximg2">
-			<h2>Right</h2>
-		</div>
-		<section>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
-		</section>
-		<div class="parallaxBg">
-			<img src="./images/Fry-futurama-3295974-1024-768.jpg" alt="Fry" class="parllaximg3">
-			<h2>Top</h2>
-		</div>
-		<section>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
-		</section>
-		<div class="parallaxBg">
-			<img src="./images/Futurama-Wallpapers-Free-Download.jpg" alt="Futurama Bender" class="parllaximg4">
-			<h2>Down</h2>
-		</div>
-		<section>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
-		</section>
-		
-
-    <aside class="z-hbox">
-        <section class="z-container z-bordered-tabpanel">
-          <h4>Space Is the Place!</h4>
-        
-          <div class="z-row">
-            <a href="javascript:void(0)" onclick="openTab(event, 'HomePanel');">
-              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Home</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openTab(event, 'DestinationPanel');">
-              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Destination</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openTab(event, 'CrewPanel');">
-              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Crew</div>
-            </a>
-            <a href="javascript:void(0)" onclick="openTab(event, 'TechnologyPanel');">
-              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Technology</div>
-            </a>
-          </div>
-      
-          <div id="HomePanel" class="z-container target">
-            <h2>Home</h2>
-            <p>New New York</p>
-          </div>
-        
-          <div id="DestinationPanel" class="z-container target" style="display:none">
-            <h2>Destination</h2>
-            <p>Mars</p>
-          </div>
-        
-          <div id="CrewPanel" class="z-container target" style="display:none">
-            <h2>Crew</h2>
-            <p>Leela, Fry, Bender...sometimes Dr. Zoidberg...</p> 
-          </div>
-        
-          <div id="TechnologyPanel" class="z-container target" style="display:none">
-            <h2>Technology</h2>
-            <p>The Planet
-               Express Ship</p>
-          </div>
-        </section>
+      <section>
+        <h4 id="config">Settings</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolor.</p>
+      </section>
+      <section>
+        <h4 id="contact">Contact</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, expedita.</p>
+      </section>
+      <section>
+        <h4 id="login">Login</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
+      </section>
+      <section>
+        <h4 id="video">Video</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, enim.</p>
+      </section>
+      <section>
+        <h4 id="gaming">Gaming</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, minus?</p>
+      </section>
+      <section>
+        <h4 id="camera">Camera</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, adipisci?</p>
+      </section>
+      <p>text</p>
     </aside>
 
-    <section class="z-frosted-glass">
-      glassy
-    </section>
-    
-  </main>
+    <footer class="z-tinted-glass">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure amet similique vel laboriosam praesentium ad incidunt, repellendus nisi est porro.
+    </footer>
 
-  <footer>footer</footer>
+    <!-- =================================================== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   
-  <script>
-  function openTab(evt, tabName) {
-    var i, x, tablinks;
-    x = document.getElementsByClassName("target");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" z-border-red", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.firstElementChild.className += " z-border-red";
-  }
-  </script>  
+    <script>
+      let toggle = document.querySelector('.dial-toggle');
+      let menu = document.querySelector('.dial');
+      toggle.onclick = function(){
+        menu.classList.toggle('active')
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
