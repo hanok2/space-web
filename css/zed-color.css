@@ -1,11 +1,22 @@
 
 body, * {
-    --amber:#ffc107;
-    --blue:  #2597f4;
-    --charcoal:#282828;
-    --dark: #0b0d17;
-    --dim:  #d0d6f9;
-    --light:#ffffff;
+    --amber:   #ffc107;
+    --tangerine:#fe8c27;
+    --paleblue: #2597f4;
+    --charcoal: #282828;
+    --charcoal-light: #484848;
+    --charcoal-dark:  #161616;
+    --dark:  #0b0d17;
+    --dimmer:#c2cae5;
+    --dim:   #d0d6f9;
+    --light: #f7f6f4;
+    --blue:   #3044a5;
+    --azureblue: #005ed8;
+    --azureblue-less: #006ef9;
+    --azureblue-more: #0058c6;
+    --azureblue-light:#0083f8;
+    --azureblue-dim:  #19457a;
+    --azureblue-dark: #223649;
 }
 
 .z-dark, .z-hover-dark:hover {color: var(--light); background-color: var(--dark)!important;}
