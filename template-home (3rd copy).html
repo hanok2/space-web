@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/zed-backgrounds.css">
+  <link rel="stylesheet" href="./css/zed-style-space.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+<style>/* Convenient stuff I might want: */
+  .hidden, .hide, .template {display: none;}
+
+  .inline {
+		display: inline-block;
+	}
+
+  .left {float: left;}
+  .right{float: right;}
+
+</style>
+
+</head>
+<body>
+  <main class="z-main" id="main"></main>
+    <header class="z-text-amber z-bar z-mobile z-vbox">
+      <div class="z-hbox z-header_top_row z-nowrap" id="header_top_row">
+        <img src="./images/logo.svg" class="--z-inline-box" alt="Logo" />
+
+        <!-- hr class="z-inline" -->
+
+        <nav class="--z-text-blue z-navmenu" id="navmenu"> <!-- I tag and ID everything because I might do some animations or something later. I'm just wasting time, really. -->
+            <a href="#" class="z-bar-item neumorph-btn z-left"><span class="id_num" id="num_home">00</span>&nbsp;<span class="id_label z-text-white" id="label_home">Home</span></a>
+            <a href="#" class="z-bar-item neumorph-btn z-left"><span class="id_num" id="num_dest">01</span>&nbsp;<span class="id_label z-text-blue" id="label_dest">Destination</span></a>
+            <a href="#" class="z-bar-item neumorph-btn z-left"><span class="id_num" id="num_crew">02</span>&nbsp;<span class="id_label z-text-blue" id="label_crew">Crew</span></a>
+            <a href="#" class="z-bar-item neumorph-btn z-left"><span class="id_num" id="num_tech">03</span>&nbsp;<span class="id_label z-text-blue" id="label_tech">Technology</span></a>
+        </nav>
+      </div>
+
+      <!-- I wish I could add a space news ticker in the header somewhere... -->
+      <section class="z-ticker">news ticker</section>
+    </header>
+    
+    <!-- =================================================================== -->
+
+    <section class="z-hero z-content">
+      <!-- Because everything is tagged and has an ID, I *could* swap out the content with JavaScript. I don't know if I will, though... -->
+      <p id="z-hero-text"><!-- Wouldn't it be nice if the lines animated on load with a slide-in? -->
+        <h4 class="z-capitalize">So, you want to travel to</h4>
+        <h1>SPACE</h1>
+        <div class="after-the-heading">
+          Lets face it; if you want to go to space, you might as well genuinely go to 
+          outer space and not hover kind of on the edge of it. Well sit back, and relax 
+          because we will give you a truly out of this world experience!
+        </div>
+      </p>
+    </section>
+
+    <section class="z-inline">
+      &nbsp;
+    </section>
+
+    <section class="z-hero-action">
+        <h6 class="neumorph-btn z-content z-circle">Explore</h6>
+    </section>
+
+    <aside class="z-vbox">
+        <section class="z-container bordered-tabpanel">
+          <h4>Space Is the Place!</h4>
+        
+          <div class="z-row">
+            <a href="javascript:void(0)" onclick="openTab(event, 'HomePanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Home</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'DestinationPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Destination</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'CrewPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Crew</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'TechnologyPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Technology</div>
+            </a>
+          </div>
+      
+          <div id="HomePanel" class="z-container tablink target">
+            <h2>Home</h2>
+            <p>New New York</p>
+          </div>
+        
+          <div id="DestinationPanel" class="z-container tablink target" style="display:none">
+            <h2>Destination</h2>
+            <p>Mars</p>
+          </div>
+        
+          <div id="CrewPanel" class="z-container tablink target" style="display:none">
+            <h2>Crew</h2>
+            <p>Leela, Fry, Bender...sometimes Dr. Zoidberg...</p> 
+          </div>
+        
+          <div id="TechnologyPanel" class="z-container tablink target" style="display:none">
+            <h2>Technology</h2>
+            <p>The Planet
+               Express Ship</p>
+          </div>
+        </section>
+
+        <section class="glass-panel">
+          glassy
+        </section>
+    </aside>
+    
+    <footer>footer</footer>
+  </main>
+  
+  <script>
+  function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("target");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" z-border-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " z-border-red";
+  }
+  </script>  
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/w3pro_style.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+  
+</head>
+<body>
+  <header class="z-black z-text-amber">
+    <img src="./images/logo.svg" alt="Logo" class="z-left" />
+    <hr class="z-inline" />
+    <nav>
+      <ul class="z-ul">
+        <li>00 Home</li>
+        <li>01 Destination</li>
+        <li>02 Crew</li>
+        <li>03 Technology</li>
+      </ul>
+    </nav>
+  </header>
+  <p>
+  So, you want to travel to
+  Space
+  Let’s face it; if you want to go to space, you might as well genuinely go to 
+  outer space and not hover kind of on the edge of it. Well sit back, and relax 
+  because we’ll give you a truly out of this world experience!
+  </p>
+  Explore
+
+
+  <div class="z-container">
+    <h2>Tabs in a Grid</h2>
+  
+    <div class="z-row">
+      <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+        <div class="z-third tablink z-bottombar z-hover-light-grey z-padding">London</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+        <div class="z-third tablink z-bottombar z-hover-light-grey z-padding">Paris</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+        <div class="z-third tablink z-bottombar z-hover-light-grey z-padding">Tokyo</div>
+      </a>
+    </div>
+  
+    <div id="London" class="z-container city" style="display:none">
+      <h2>London</h2>
+      <p>London is the capital city of England.</p>
+    </div>
+  
+    <div id="Paris" class="z-container city" style="display:none">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+  
+    <div id="Tokyo" class="z-container city" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+  </div>
+  
+  <script>
+  function openCity(evt, cityName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" z-border-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " z-border-red";
+  }
+  </script>  
+</body>
+</html>

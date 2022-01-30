@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  
+  <link rel="stylesheet" href="./css/zed-backgrounds.css">
+  <link rel="stylesheet" href="./css/zed-style-space.css">
+  <link rel="stylesheet" href="./css/floating-dial.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+<style>/* Convenient stuff I might want: */
+  .hidden, .hide, .template {display: none;}
+
+  .inline {
+    display: inline-block;
+  }
+
+  .left {float: left;}
+  .right{float: right;}
+
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  header,
+  main,
+  .sidebar,
+  footer {
+    padding: 2em;
+  }
+
+  header { background: inherit; }
+  main { background: inherit;}
+
+
+  /* ======================
+    Demo stuff starts here 
+    ========================*/
+
+  body {
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-areas:
+      "header header header"
+      ". main ."
+      ". side ."
+      "footer footer footer"
+  }
+
+  #pageTop {
+      grid-template-columns: 1em 30px minmax(100px, 2000px) 500px 1em;
+      grid-template-areas: ". logo hr navmenu ."
+  }
+
+  @media only screen and (min-width: 768px) {
+    body {
+      grid-template-columns: 1.5em minmax(400px, 650px) minmax(200px, 350px) 1.5em;
+      grid-template-areas:
+        "header header header header"
+        ". main side ."
+        "footer footer footer footer";
+      gap: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    body {
+      grid-template-columns: minmax(1.5em, 1fr) minmax(650px, 960px) 450px minmax(1.5em, 1fr);
+      grid-template-areas:
+        "header header header header"
+        ". main side ."
+        "footer footer footer footer"
+    }
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+  .logo > img {
+    height: 30px;
+    width: 30px;
+  }
+
+  #ruleLine {
+    grid-area: hr;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .menu {
+    grid-area: navmenu;
+  }
+
+  header { grid-column: header / header; } 
+  main { grid-area: main; }
+  .sidebar { grid-area: side; }
+  footer { grid-area: footer; }
+
+
+  .menu {
+    /* style the nav like a dialog box, but glassy */
+    position: sticky;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    min-height: 10vh;
+    background: linear-gradient(to right top, rgba(24, 24, 24, 0.7), rgba(55, 55, 55, 0.25));
+    z-index: 5;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .menu > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding:0;
+    margin:0;
+    z-index: 10;
+  }
+
+  .menu-btn {
+    /* style the li as buttons */
+    padding:8px 16px;
+    border-top: 1px solid #ddd;
+  }
+  /* .menu > ul > li:last-child { border-bottom: none;} */
+</style>
+
+</head>
+<body>
+    <header id="pageTop" class="x-masonry-grid">
+        <span class="logo"><img src="./images/icon-hamburger.svg" alt="Show/Hide (Hamburger Menu)"></span>
+        <hr id="ruleLine">
+        <nav class="menu">
+          <ul>
+            <li class="menu-btn current"><a href="#">Home</a></li>
+            <li class="menu-btn"><a href="#">ZedBlog</a></li>
+            <li class="menu-btn help-btn"><a href="#">Knowledge Base</a></li>
+            <li class="menu-btn help-btn"><a href="#">About</a></li>
+            <li class="menu-btn help-btn"><a href="#">Contact Us</a></li>
+            <li class="menu-btn login-btn"><a href="#">Login</a></li>
+            <li class="menu-btn signup-btn"><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main class="main-section z-masonry-grid">
+        <h2 class="z-card-wide">Main Heading (2)</h2>
+        <img src="./images/289580-Futurama.jpg" class="z-card-tallish z-card-wide" alt="Futurama Rocks!" />
+
+        <article class="z-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi blanditiis nostrum ipsam obcaecati ad tempore iste mollitia! Earum consectetur consequuntur dolor et consequatur corporis inventore neque quo veniam. Error quos dolores unde rem dolor ducimus aliquid vero praesentium laboriosam eveniet, optio neque perferendis nihil, fugiat eum hic molestiae harum placeat!</article>
+        <article class="z-card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum natus, molestias quia consequatur quos esse illum culpa vitae dolores ipsum deleniti unde consectetur recusandae assumenda reprehenderit et! Eaque, excepturi magni.</article>
+        <div class="z-card-wide z-center"><a href="#" class="z-neupanel z-cta-btn z-circle">EXPLORE</a></div>
+        <div class="card-box z-card-wide z-card-tall">
+          <div class="card">card1</div>
+          <div class="card">card2</div>
+        </div>
+    </main>
+    <aside class="sidebar z-tinted-glass box-glow">
+      <h4>Aside Heading (4)</h4>
+
+      <div class="dial">
+        <a href="#" class="dial-toggle z-text-black"><ion-icon name="add-outline"></ion-icon></a>
+        <li style="--i:0;">
+          <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+        </li>
+        <li style="--i:1;">
+          <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+        </li>
+        <li style="--i:2;">
+          <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+        </li>
+        <li style="--i:3;">
+          <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+        </li>
+        <li style="--i:4;">
+          <a href="#"><ion-icon name="key-outline"></ion-icon></a>
+        </li>
+        <li style="--i:5;">
+          <a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
+        </li>
+        <li style="--i:6;">
+          <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
+        </li>
+        <li style="--i:7;">
+          <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
+        </li>
+      </div>
+
+      <p>text</p>
+    </aside>
+
+    <footer class="z-tinted-glass">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure amet similique vel laboriosam praesentium ad incidunt, repellendus nisi est porro.
+    </footer>
+
+    <!-- =================================================== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+    <script>
+      let toggle = document.querySelector('.dial-toggle');
+      let menu = document.querySelector('.dial');
+      toggle.onclick = function(){
+        menu.classList.toggle('active')
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/zed-backgrounds.css">
+  <link rel="stylesheet" href="./css/zed-style-space.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+<style>/* Convenient stuff I might want: */
+  .hidden, .hide, .template {display: none;}
+
+  .inline {
+		display: inline-block;
+	}
+
+  .left {float: left;}
+  .right{float: right;}
+
+</style>
+
+</head>
+<body>
+  <header class="z-vbox">
+    <div class="z-hbox z-header_top_row z-nowrap" id="header_top_row">
+      <img src="./images/logo.svg" alt="Logo" />
+
+      <hr class="z-inline">
+
+      <nav class="z-navmenu" id="navmenu"> <!-- I tag and ID everything because I might do some animations or something later. I'm just wasting time, really. -->
+          <a href="#" class="menu-btn xz-right"><span class="id_num" id="num_home">00</span>&nbsp;<span class="id_label z-text-white" id="label_home">Home</span></a>
+          <a href="#" class="menu-btn xz-right"><span class="id_num" id="num_dest">01</span>&nbsp;<span class="id_label z-text-blue" id="label_dest">Destination</span></a>
+          <a href="#" class="menu-btn xz-right"><span class="id_num" id="num_crew">02</span>&nbsp;<span class="id_label z-text-blue" id="label_crew">Crew</span></a>
+          <a href="#" class="menu-btn xz-right"><span class="id_num" id="num_tech">03</span>&nbsp;<span class="id_label z-text-blue" id="label_tech">Technology</span></a>
+      </nav>
+    </div>
+
+    <!-- I wish I could add a space news ticker in the header somewhere... 
+    <section class="z-ticker">news ticker</section>
+    -->
+  </header>
+  
+  <main class="z-main" id="main">
+    <!-- =================================================================== -->
+
+    <section class="z-hero z-content">
+      <!-- Because everything is tagged and has an ID, I *could* swap out the content with JavaScript. I don't know if I will, though... -->
+      <p id="z-hero-text"><!-- Wouldn't it be nice if the lines animated on load with a slide-in? -->
+        <h4 class="z-capitalize">So, you want to travel to</h4>
+        <h1>SPACE</h1>
+        <div class="after-the-heading">
+          Lets face it; if you want to go to space, you might as well genuinely go to 
+          outer space and not hover kind of on the edge of it. Well sit back, and relax 
+          because we will give you a truly out of this world experience!
+        </div>
+      </p>
+    
+      <section class="z-hero-action">
+          <h6 class="z-neupanel z-circle z-cta-btn">Explore</h6>
+      </section>
+    </section>
+
+    <section class="tearout">
+      <div class="bg"></div>
+      <div class="paper"></div>
+    </section>
+
+    <section>
+      <div class="parallaxBg">
+			<img src="./images/Bender-futurama-3139514-1024-768.jpg" alt="Futurama ship" class="parllaximg1">
+			<h2>Left</h2>
+		</div>
+		<section>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
+		</section>
+		<div class="parallaxBg">
+			<img src="./images/100622-futuramajpg-a518e007521fad5c.jpg" alt="Futurama" class="parllaximg2">
+			<h2>Right</h2>
+		</div>
+		<section>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
+		</section>
+		<div class="parallaxBg">
+			<img src="./images/Fry-futurama-3295974-1024-768.jpg" alt="Fry" class="parllaximg3">
+			<h2>Top</h2>
+		</div>
+		<section>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
+		</section>
+		<div class="parallaxBg">
+			<img src="./images/Futurama-Wallpapers-Free-Download.jpg" alt="Futurama Bender" class="parllaximg4">
+			<h2>Down</h2>
+		</div>
+		<section>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus itaque accusamus impedit magnam ipsam! Maxime odit eos libero repudiandae. Eius ipsa illum adipisci a obcaecati, hic, est facilis nam dicta similique, blanditiis officiis voluptatem nihil modi reiciendis dolorum assumenda ratione? Porro temporibus est ab delectus quae obcaecati, itaque necessitatibus corrupti quam quisquam rerum quaerat voluptates laboriosam iure. Sit, consequuntur aperiam. Temporibus, enim quidem. Eaque quasi adipisci aliquam, veritatis nulla ad accusantium! Quo atque rem dignissimos facilis quae. Quae, rem quis blanditiis eaque eligendi quod voluptate quasi magnam dolor quos culpa quo vitae eveniet earum voluptatum porro debitis est architecto assumenda non? Soluta expedita cupiditate amet praesentium, fugit cum. Nostrum reprehenderit perferendis quas tenetur impedit aliquid, eaque odio voluptate iure. Ipsa officia illum pariatur voluptatibus obcaecati sint aliquid accusamus necessitatibus perspiciatis? Iste obcaecati dolorum corrupti, officia voluptatem consequuntur inventore ipsam totam rerum quibusdam velit qui explicabo nemo consectetur, pariatur recusandae voluptate veniam? Doloribus quaerat eius minus dicta laboriosam ipsa vitae alias!</p>
+		</section>
+		
+
+    <aside class="z-hbox">
+        <section class="z-container z-bordered-tabpanel">
+          <h4>Space Is the Place!</h4>
+        
+          <div class="z-row">
+            <a href="javascript:void(0)" onclick="openTab(event, 'HomePanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Home</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'DestinationPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Destination</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'CrewPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Crew</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openTab(event, 'TechnologyPanel');">
+              <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Technology</div>
+            </a>
+          </div>
+      
+          <div id="HomePanel" class="z-container target">
+            <h2>Home</h2>
+            <p>New New York</p>
+          </div>
+        
+          <div id="DestinationPanel" class="z-container target" style="display:none">
+            <h2>Destination</h2>
+            <p>Mars</p>
+          </div>
+        
+          <div id="CrewPanel" class="z-container target" style="display:none">
+            <h2>Crew</h2>
+            <p>Leela, Fry, Bender...sometimes Dr. Zoidberg...</p> 
+          </div>
+        
+          <div id="TechnologyPanel" class="z-container target" style="display:none">
+            <h2>Technology</h2>
+            <p>The Planet
+               Express Ship</p>
+          </div>
+        </section>
+    </aside>
+
+    <section class="z-frosted-glass">
+      glassy
+    </section>
+    
+  </main>
+
+  <footer>footer</footer>
+  
+  <script>
+  function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("target");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" z-border-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " z-border-red";
+  }
+  </script>  
+</body>
+</html>

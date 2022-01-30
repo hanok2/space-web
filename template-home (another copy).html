@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/zed.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+</head>
+<body>
+  <main class="z-main" id="main"></main>
+    <header class="z-text-amber z-bar z-mobile">
+      <img src="./images/logo.svg" alt="Logo" />
+      <hr class="z-inline" />
+      <nav class="z-text-amber">
+          <a href="#" class="z-bar-item neumorph-btn">00 Home</a>
+          <a href="#" class="z-bar-item neumorph-btn">01 Destination</a>
+          <a href="#" class="z-bar-item neumorph-btn">02 Crew</a>
+          <a href="#" class="z-bar-item neumorph-btn">03 Technology</a>
+        </ul>
+      </nav>
+    </header>
+  
+    <p>
+      So, you want to travel to
+      <h1>Space</h1>
+      Lets face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we will give you a truly out of this world experience!
+    </p>
+      Explore
+    
+    
+      <div class="z-container">
+        <h2>Space Is the Place!</h2>
+      
+        <div class="z-row">
+          <a href="javascript:void(0)" onclick="openTab(event, 'HomePanel');">
+            <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Home</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openTab(event, 'DestinationPanel');">
+            <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Destination</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openTab(event, 'CrewPanel');">
+            <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Crew</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openTab(event, 'TechnologyPanel');">
+            <div class="z-quarter tablink z-bottombar z-hover-light-grey z-padding">Technology</div>
+          </a>
+        </div>
+    
+        <div id="HomePanel" class="z-container target">
+          <h2>Home</h2>
+          <p>New New York</p>
+        </div>
+      
+        <div id="DestinationPanel" class="z-container target" style="display:none">
+          <h2>Destination</h2>
+          <p>Mars</p>
+        </div>
+      
+        <div id="CrewPanel" class="z-container target" style="display:none">
+          <h2>Crew</h2>
+          <p>Leela, Fry, Bender...sometimes Dr. Zoidberg...</p> 
+        </div>
+      
+        <div id="TechnologyPanel" class="z-container target" style="display:none">
+          <h2>Technology</h2>
+          <p>The Planet Express Ship</p>
+        </div>
+      </div>    
+    </main>
+  
+  <script>
+  function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("target");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" z-border-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " z-border-red";
+  }
+  </script>  
+</body>
+</html>
