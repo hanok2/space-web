@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Glassy Moongazer Prototype</title>
+    <link rel="stylesheet" type="text/css" href="./css/moon-style.css">
+    <link rel="stylesheet" type="text/css" href="./css/glassy-card-styles.css">
+	</head>
+	<body>
+		<main class="-bg-circuit">
+
+			<div id="moon_backdrop">
+        <!-- Could probably put a mood video on the background, 
+          but that would be WAY too much movement at once! 
+          Don't want people to get motion sick just visiting 
+          a webpage!
+        -->
+        <div id="fillrangeValue1" class="moon-panel">
+          <!-- These translucent doors slide closed. -->
+        </div>
+				<div id="fillrangeValue2" class="moon-panel">
+          <!-- The translucent texture is an SVG file. -->
+        </div>
+				<div id="fillrangeValue3" class="moon-panel">
+          <!-- These translucent doors slide closed. -->
+        </div>
+				<div id="fillrangeValue4" class="moon-panel">
+          <!-- Any SVG texture can be used for these doors -->
+        </div>
+			</div>
+
+      <section class="moon-overlay">
+        <header>
+          <h1>Moongazer07</h1>
+          <nav class="heroNav">
+            <a href="#" class="heroButton blue"><span>Tetris</span></a>
+            <a href="#" class="heroButton red"><span>Mozilla Dino</span></a>
+            <a href="#" class="heroButton green"><span>Don't Click Me</span></a>
+          </nav>
+        </header>
+        
+        <section class="bg-circuit wiggle-grid glassy-neon-cards">
+          <!-- 
+            TODO: Figure out how to do the `wiggle-grid` layout with a grid-area-template... 
+            TODO: Come up with a *simple* flexbox version of `wiggle-grid` that sort-of floats a card 
+            high or low in a horizontal row...
+          -->
+          <div class="neon-box">
+            <span></span>
+            <div class="neon-content">
+              <h3>Dino Runner</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illum quae.</p>
+              <a href="#">Learn More...</a>
+            </div>
+          </div>
+
+          <div class="neon-box">
+            <span></span>
+            <div class="neon-content">
+              <h3>Tetris</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit libero mollitia nisi. Dolore quaerat dicta laudantium sequi deleniti, culpa asperiores?</p>
+              <a href="#">Learn More...</a>
+            </div>
+          </div>
+
+          <div class="neon-box">
+            <span></span>
+            <div class="neon-content">
+              <h3>Surprise!</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sapiente perferendis molestiae voluptatum eveniet?</p>
+              <a href="#">Learn More...</a>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <nav class="z-claypanel">
+            <h3>Footer Links:</h3>
+            <ul class="z-ul">
+              <li><a href="#" class="blue"><span>Site Btn 1</span></a></li>
+              <li><a href="#" class="green"><span>Site Btn 2</span></a></li>
+              <li><a href="#" class="red"><span>Site Btn 3</span></a></li>
+              <li><a href="#" class="blue"><span>Site Btn 4</span></a></li>
+            </ul>
+          </nav>
+        </footer>  
+      </section>
+
+		</main>
+
+		<script type="text/javascript">
+			function rangeSlider(value){
+				document.getElementById('rangeValue').innerHTML = value;
+				document.getElementById('fillrangeValue1').style.width = +value/2+"%";
+				document.getElementById('fillrangeValue2').style.width = +value/2+"%";
+				document.getElementById('fillrangeValue3').style.height = +value/2+"%";
+				document.getElementById('fillrangeValue4').style.height = +value/2+"%";
+			}
+
+      // =========================================================================
+      // animageSlidingDoors()
+
+      function animateSlidingDoors(value, dir){
+        var amt = dir*value;
+        var rangeValue = document.getElementById('rangeValue')
+
+        if (value!=0 && value==false) {
+          // There was an error.
+          console.log("Dropping out of recursive stack... " + String.toString(dir));
+          return(false, dir);
+        } 
+        else if (-50 < amt < 50) { // and it *better be*!
+          range.innerHTML = (amt + dir) + '%'; // the new range string
+          if (amt == 50 || amt == -50) return animateSlidingDoors(dir*amt, -1*dir); // Switch direction!
+          else {} // else we have incremented either positively or negatively, going either in or out... Continue...
+        } 
+        else if (Math.abs(amt) >= 50) {
+          console.log("I think we got a bogus value! " + value + '%');
+          value == 50*dir; //just to be safe, if we got a crazy number it gets made sane
+          range.innerHTML = (50*dir) + '%';
+
+          if (dir<0) { // Now, switch the direction!
+            dir=1;
+          } 
+          else {
+            dir=-1;
+          }
+        } 
+        else return(false, dir); // Non-recoverable problem, like getting a Boolean or something...
+
+        // Okay, now we have a reasonable and incremented `amt` datum, plus the HTML is updated with its value.
+
+        document.getElementById('fillrangeValue1').style.width  = (amt)+"%";
+        document.getElementById('fillrangeValue1').style.height = (amt)+"%";
+				
+        document.getElementById('fillrangeValue2').style.width  = (amt)+"%";
+        document.getElementById('fillrangeValue2').style.height = (amt)+"%";
+				
+        document.getElementById('fillrangeValue3').style.width  = (amt)+"%";
+        document.getElementById('fillrangeValue3').style.height = (amt)+"%";
+        
+        document.getElementById('fillrangeValue4').style.width  = (amt)+"%";
+				document.getElementById('fillrangeValue4').style.height = (amt)+"%";
+				
+        return animateSlidingDoors(amt, dir); // push another one on the recursion stack
+      }
+		</script>
+	</body>
+</html>
