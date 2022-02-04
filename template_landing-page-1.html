@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="RSD 5.0.3490">
+  <title>Lab Direct</title>
+  <link rel="" />
+  <!-- link rel="stylesheet" href="./css/vanillacss.min.css" -->
+  <link rel="stylesheet" href="./css/style-glassify.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- link rel="stylesheet" href="./css/wireframe-theme.min.css" -->
+  <link rel="stylesheet" href="./css/zed-style-space.css"><!-- This mostly uses CSS style framework I've been working on... -->
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+    body {
+        background-color: #eee;
+    }
+    
+    .navbar-nav>li>a {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: 20px;
+        color: #fff;
+    }
+    
+    .navbar-toggler {
+        padding: .20rem .50rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+    
+    .nav-link {
+        color: #fff !important;
+    }
+    
+    .wrapper {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background-color: #000;
+        clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 71% 100%);
+        transition: 1s all;
+    }
+    
+    .navbar-brand {
+        color: #fff;
+        font-family: 'Cormorant Garamond', Garamond, sans-serif;
+        margin-bottom: 4px;
+        font-size: 27px;
+    }
+    
+    .navbar-red:hover .wrapper {
+        clip-path: polygon(81% 0, 100% 0, 100% 50%, 100% 100%, 65% 100%)
+    }
+    
+    .navbar-brand:hover {
+        color: #fff;
+    }
+    
+    .navbar-red {
+        background-color: rgb(64, 0, 0);
+        color: #fff;
+    }
+    
+    .all-show {
+        z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="landing_page_1" class="z-vbox">
+    <header id="page_top_header" class="z-vbox">
+        <!-- This is the beginning of the Navigation Bar (`page_top_nav`). 
+             It is based on example navbar code in a tutorial I did somewhere--
+             I wanted a Bootstrap-based navbar quickly for this prototype. 
+        -->
+        <nav id="page_top_nav" class="navbar navbar-expand-lg navbar-red navbar-dark">
+          <div class="wrapper"> </div><!-- This "wrapper" CSS class is what makes the diagonal break. -->
+          <div class="container-fluid all-show"> <a class="navbar-brand" href="#">Lab Direct <i class="fa fa-codepen"></i></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                      <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">About us</a> </li>
+                      <!--
+                          <li class="nav-item"> <a class="nav-link" href="#">Products</a> </li>
+                      -->
+                      <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Events</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                      <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-search"></i></a> </li>
+                  </ul>
+                  <div class="d-flex flex-column sim"> <span>1 item added to your quote</span> <small class="text-primary">view your quote</small> </div>
+              </div>
+          </div>
+        </nav>
+	</header>
+
+    <section class="hero z-vbox">
+        <div id="hero_left">
+            <h2 class="z-center">Welcome to Lab Direct</h2>
+            <h1 class="main-heading">Where Every Shipment Is Life-Changing</h1>
+        </div>
+        <div class="clip-side"> 
+            <div class="container-text-page-1 hero_side">
+                <p>&nbsp;</p>
+                <h2>Need Help?</h2>
+                <h2><a href="#">Get in Touch 24 7</a></h2>
+            </div>
+        </div>
+    </section>
+
+	<section>
+	  <h2>Our Suite of Services</h2>  
+
+	</section>
+	<footer>
+	footer
+	</footer>
+  </main>
+  <!-- script src="js/jquery.min.js"></script -->
+  <!-- script src="js/outofview.js"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
