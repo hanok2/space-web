@@ -92,6 +92,9 @@ body, * {
 .z-text-light-grey,.z-hover-text-light-grey:hover,.z-text-light-gray,.z-hover-text-light-gray:hover{color:#f1f1f1!important}
 .z-text-dark-grey,.z-hover-text-dark-grey:hover,.z-text-dark-gray,.z-hover-text-dark-gray:hover{color:#3a3a3a!important}
 
+.z-text-charcoal {color: var(--charcoal);}
+.z-text-dark  {color: var(--dark);}
+
 .z-border-amber,.z-hover-border-amber:hover{border-color:#ffc107!important}
 .z-border-aqua,.z-hover-border-aqua:hover{border-color:#00ffff!important}
 .z-border-blue,.z-hover-border-blue:hover{border-color:#2196F3!important}

@@ -1,0 +1,532 @@
+@import url("zed.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --amber: #ffc107;
+  color: var(--amber);
+}
+
+/* */
+body {
+    background-color: black; /* just in case things break... */
+    color: var(--amber);
+    background-image: url("../img/5053309.jpg");
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 4rem;
+  opacity: 0.8;
+}
+
+.text-shadow {
+  opacity: 1;
+  color: fff;
+  text-shadow: 0 0 24px #111;
+}
+
+.neon {
+  opacity: 1;
+  color: fff;
+  text-shadow: 0 0 24px var(--amber);
+}
+.neon:after {
+  content: attr("data-text");
+  z-index: -1;
+  color: var(--amber);
+}
+
+.glow {
+  opacity: 1;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--amber);
+  text-shadow: 0 0 16px var(--amber);
+}
+
+h2,
+p {
+  color: var(--amber);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: var(--amber);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+#myHeader {
+  z-index: 99;
+}
+
+main {
+  min-height: 100vh;
+  /* With the background in the <body> tag, we *could* add the following purple-to-gray gradient overlay:
+  /* background: linear-gradient(to right top,rgba(72,72,172,0.7), rgba(224,224,224,0.1)); */
+  background: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Poppins", sans-serif;
+  /* background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/**
+ * 
+ */
+
+ .float-left {
+    float: left;
+ }
+
+
+ .flexcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem;
+  justify-content: space-evenly;
+  /*width: 25vw;*/
+ }
+
+ .flexcol-left {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+ }
+
+ .flexcol-item {
+    /* */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-basis: 85%;
+ }
+
+ .flexrow {
+    display: flex;
+    padding: 0.5em;
+    /* height: 40vh; */
+    /* width: 70vw; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+
+ .flexrow-item {
+    /* background-color: #6cdbeb; */
+    z-index: 50;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    margin: 0.5em;
+ }
+
+.w-100 {
+   max-width: 100vw;
+   max-height: 100vh;
+   width: 100%;
+   height: 100%;
+}
+
+.w-75 {
+  width: 75%;
+  max-width: 75vw;
+}
+
+.w-50 {
+   max-width: 50vw;
+   width: 50%;
+   max-height: 50vh;
+   height: 50%;
+}
+
+.w-25 {
+  width: 25%;
+  max-width: 25vw;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+
+  .col1, .col2, .col3, .cols {float:left}
+  .col1 {width:230px;padding-left:38px}
+  .col2 {width:532px;padding-left:38px}
+  .col3 {width:163px;padding-left:27px}
+  .col4 {float:right;width:112px}
+
+}
+
+/* This next one is very important, but it may need tweaks to look the way you want on a specific browser... */
+.glass {
+    /* background-color:rgba(124, 124, 124, 0.25); */
+    background-color: rgba(255,255,255,0.3);
+    min-height: 80vh;
+    max-width: 80vw;
+    position: absolute;
+    top: 8vh;
+    bottom: 8vh;
+    left: 10vw;
+    right: 10vw;
+    overflow: auto;
+
+    /* background: linear-gradient(to right top, rgba(224, 224, 224, 0.5), rgba(255, 255, 255, 0.25)); */
+    border-radius: 2rem;
+    
+    z-index: 25;
+    
+    padding: 1em;
+
+    backdrop-filter: blur(40px);
+}
+.smoked {
+    position: inline-block;
+    margin: 0;
+    padding: 0;
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.0px );
+    -webkit-backdrop-filter: blur( 4.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.overglass {
+    z-index: 40;
+    background: rgba(255,255,255,0.3);
+}
+.behind-glass {
+    /* if the browser support for blurring is a problem (such as Firefox ESR or Mobile, I think), 
+     * then use this extra layer to sort-of fix things:
+     */
+    position: absolute;
+    top: 10vh;
+    left: 11vw;
+    bottom: 12vh;
+    right: 24vh;
+    
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.7);
+    filter: blur(20px);
+    
+    border-radius: 2rem;
+
+    z-index: 3;
+}
+
+.dashboard {
+    position: fixed;
+    top: 5vh;
+    left: 1vw;
+    bottom: 20vh;
+    right: 81vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  z-index: 90;
+  background: linear-gradient(
+    to right bottom,
+    rgba(5, 5, 5, 0.7),
+    rgba(5, 5, 5, 0.3)
+  );
+  border-radius: 1rem;
+
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+}
+
+.dashboard img {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 1rem;
+
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+}
+
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.games {
+  flex: 2;
+  /* background-color: #6cdbeb; */
+}
+
+/* GAMES */
+.status {
+  margin-bottom: 1rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(5, 5, 5, 0.7),
+    rgba(5, 5, 5, 0.3)
+  );
+  border: none;
+  
+  width: 50%;
+  min-width: 35vw;
+  padding: 0.5rem;
+  
+  border-radius: 2rem;
+  
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+}
+
+.games {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cards {
+  display: flex;
+  padding: 0.5em;
+  width: 95vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card, .gridcard {
+  background: linear-gradient(
+    to left top,
+    rgba(5, 5, 5, 0.8),
+    rgba(5, 5, 5, 0.5)
+  );
+
+  /* 
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     border-radius: 10px;
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+  */
+  border-radius: 1rem;
+  
+  margin: 2rem 1rem;
+  padding: 2rem;
+  
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+  
+  /* justify-content: space-between; */
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+.gridcard {
+  display: grid;
+}
+
+.progress {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  width: 100%;
+  height: 25%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.progress::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(236, 236, 236);
+  position: absolute;
+  left: 60%;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* **************************** */
+
+ /* Style the tab */
+ .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 
+
+.active {
+  display: inline-block;
+}
+
+/* **************************** */
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  padding: 1rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  /* width: 100%; 
+  height: 100%; */
+  max-width: 85vw;
+  width: 100%;
+  min-width: 30vw;
+  max-height: 85vh;
+  height: 100%;
+  min-height: 30vw;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 1%;
+  right: 90%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  left: 90%;
+  right: 1%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .accordion, .container {
+    float: none;
+    display: block;
+    position: relative;
+  }
+}

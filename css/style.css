@@ -316,7 +316,8 @@ footer {
 	}
 }
 
-/* =========================================== */
+/* ============================================ */
+/* Neumorphic GUI Controls                      */
 
 :root {
   --primary-light: #8abdff;
@@ -347,20 +348,26 @@ html {
       font-size: 75%; } 
     }
 
-.container {
+.neu-container {
+  /*
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  */
   font-family: 'Poppins', sans-serif;
   background: var(--greyLight-1); 
+  border-radius: 3rem;
 }
 
-.components {
+.neu-components {
   width: 75rem;
   height: 40rem;
   border-radius: 3rem;
+  /*
   box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+  */
+  box-shadow: -20px -20px 60px rgba(0,0,0,0.55) inset, 10px 10px 20px rgba(20,20,24,0.25);
   padding: 4rem;
   display: grid;
   grid-template-columns: 17.6rem 19rem 20.4rem;
